@@ -1,4 +1,4 @@
-# strawpoll-bypass
+# straw poll bypass (automatic voting)
 Script for automatically vote in the website "strawpoll.me" 
 
 HOW TO USE:
