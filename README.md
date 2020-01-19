@@ -1,7 +1,14 @@
-# straw poll bypass (automatic voting)
-Script for automatically vote in the website "strawpoll.me" 
+# Strawpoll.me bypass (automatic voting)
+Script for automatically vote multiply times in the website "strawpoll.me". Easy to use.
 
-HOW TO USE:
+How to use it on Windows (for dummies):
+
+1. Download the program GIT if you don't have it. (https://en.wikipedia.org/wiki/Git, https://git-scm.com/downloads)
+2. Download node.js if you don't have it. (https://en.wikipedia.org/wiki/Node.js, https://nodejs.org/en/)
+3. Download the script
+
+
+
 
 First of all, you will need to install the program GIT ( https://git-scm.com/downloads )
 Then, create a new folder and place the 2 script files there.
