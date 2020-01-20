@@ -19,9 +19,7 @@ How to use it on Windows (for dummies):
 ¹ source code: https://github.com/HRPsomenumbers/strawpoll-bot/blob/master/index.js
 
 ² The script has 2 dependencies: https://www.npmjs.com/package/cheerio, https://www.npmjs.com/package/request
-³ In the following format: [ [ip here], [another one here], [also here], [here too] ] 
-
-You can add more if you want (you really should add at least 4000). Also you may want use https://shancarter.github.io/mr-data-converter/ to make things faster.
+³ In the following format: "[ [ip here], [another one here], [also here], [here too] ]". You can add more if you want (you really should add at least 4000). Also you may want use https://shancarter.github.io/mr-data-converter/ to make things faster.
 
 
 
