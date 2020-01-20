@@ -11,7 +11,7 @@ How to use it on Windows (for dummies):
 6. Write "npm i cheerio". Wait for it download, then write "npm i request" ²
 7. Get a list of HTTP proxies (you can find them here: https://proxyscrape.com/free-proxy-list)
 8. Place them at socks.json ³
-9. Edit the lines 15, 16 and 17 in the script (Its where you can configurate the script, it is really easy) and then save the file
+9. Edit the lines 15, 16 and 17 in the script (Its where you can configurate the script, it is really easy) and then save the file          
 10.Write "node index" in GIT (notice you must open git in folder where your script is in).
 
 11.Profit !
