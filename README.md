@@ -30,6 +30,7 @@ You can add more if you want (you really should add at least 4000). Also you may
 
 
 PROOF THAT IT WORKS : https://www.strawpoll.me/19271268/r
+
 It is a really simple code, I may explain how it works here some day.
 
 Status: CURRENTLY WORKING; 20/01/2020
