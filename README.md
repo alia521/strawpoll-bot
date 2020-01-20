@@ -12,8 +12,8 @@ How to use it on Windows (for dummies):
 7. Get a list of HTTP proxies (you can find them here: https://proxyscrape.com/free-proxy-list)
 8. Place them at socks.json ³
 9. Edit the lines 15, 16 and 17 in the script to configurate it and then save the file.
-10.Write "node index" in GIT (notice you must open git in folder where your script is in).
-11.Profit !
+10. Write "node index" in GIT (notice you must open git in folder where your script is in).
+11. Profit !
 
 
 ¹ source code: https://github.com/HRPsomenumbers/strawpoll-bot/blob/master/index.js
