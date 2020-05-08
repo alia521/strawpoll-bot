@@ -12,9 +12,9 @@ Features:
 
 How to use it on Windows:
  1. Install dependencies; (request, longjohn and cheerio)
-  https://www.npmjs.com/package/request
-  https://www.npmjs.com/package/longjohn
-  https://www.npmjs.com/package/cheerio
+  https://www.npmjs.com/package/request                                                                                         
+  https://www.npmjs.com/package/longjohn                                                                                       
+  https://www.npmjs.com/package/cheerio                                                                                         
   
  2. Place the socks you got at 'socks.json' in the following format: [ [IP HERE], [ANOTHER IP], [AND SO ON] ]
  3. Edit the lines 15, 16 and 17
