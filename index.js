@@ -1,17 +1,22 @@
 var request     = require('request'); // 
 var cheerio     = require('cheerio'); //
-var interface   = require('readline-sync');
 var fuck_errors = require('longjohn'); // supposed to handle error ECONNRESET
-var plist       = [] // HTTP proxies LIST
+var plist       = require('./socks.json'); // HTTP proxies LIST
+
 
 var r = request.defaults()
 var x = 0; // number of proxies that didn't work for some reason;
 var y = 0; // number of proxies that have worked;
 
-var vote_url = interface.question("What strawpoll.me poll you want to bot (url) ? ");
-var op       = interface.question("What option you wan't to bot ? ");
+
+
+/* edit below */
+
+var vote_url = 'https://www.strawpoll.me/19987846' // edit last numbers
+var op       = 0; // choose an option; 0 = first one, 1 = second, 2 = third and so on
 var ratio    = 10; // ratio of votes; 200 = 5 per second; 1000/ratio = y per second;
 
+/* warning: do not make changes anywhere else if you do not know what you're doing*/
 
 
 function vote(url, value, n) { // function for vote
@@ -31,7 +36,7 @@ request(url, function (error, response, body) {
 
  })}
 
-function setP(i) {  r = request.defaults({'proxy':'http://' + plist[i]}) }
+function setP(i) {  r = request.defaults({'proxy':'http://' + plist[i + 0]}) }
 
 function sendVote(url, security_token, option_, a) {
   r.post(url, {form:{"security-token":security_token, 'options':option_}}).on('error', function (exc) {
@@ -41,15 +46,4 @@ function sendVote(url, security_token, option_, a) {
 })}
 
 
-
-
-request('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all', 
-function (error, response, body) {
-  if (error) {
-     console.log('Failed to get the proxies. Try again later.')}
-     plist = body.toString().split('\n');
-
-    if(response.statusCode == 200) {
-      vote(vote_url, op, plist.length)
-    }
-});
+vote(vote_url, op, plist.length)
