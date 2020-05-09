@@ -2,32 +2,29 @@
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use (maybe not for dummies).
 If you have no idea whats a script, npm, github or dependencies you should look at the end of the page.
 
-Features:
+## Features
 - Automatically vote multiple times;
+- Auto proxy scrapper;
+- Friendly interface;
 - Works with IP check;
-- Faster than you ejaculating;
-- It doesn't work with CAPTCHA
+- It's fast;
+- Do *NOT* work with _CAPTCHA_;
 
-*You may get the error "read ECONNRESET" sometimes. Just ignore it and use the script again.
-
-How to use it on Windows:
- 1. Install dependencies; (request, longjohn and cheerio)
-  https://www.npmjs.com/package/request                                                                                         
-  https://www.npmjs.com/package/longjohn                                                                                       
-  https://www.npmjs.com/package/cheerio                                                                                         
-  
- 2. Place the socks you got at 'socks.json' in the following format: [ [IP HERE], [ANOTHER IP], [AND SO ON] ]
- 3. Edit the lines 15, 16 and 17
- 4. Profit
-
-https://www.strawpoll.me/19987846/r
+### I plan to add:
+- [] Voting in multiple options poll;
+- [] Voting in strawpoll.com (only works for strawpoll.me for now);
+- [] If you wan't anything you can request it :)
 
 
-Status: Currently working; 08/05/2020
-proof https://www.strawpoll.me/19987846/r
+## How to use it:
+- Download or clone this repository;
+- Open it's folder;
+- Write node index in your terminal/git
+- It will ask you some options:
 
+![Options](https://raw.githubusercontent.com/HRPsomenumbers/images/master/options.PNG?token=AKD35ONDFG3K6A7LYILYR2K6W2ZT4)
 
-
+![Proof that it works](https://raw.githubusercontent.com/HRPsomenumbers/images/master/proof.PNG?token=AKD35ON6H3XSVKCZPAVHEV26W2ZEI)
 
 
 
