@@ -1,6 +1,6 @@
 # Strawpoll.me bypass (automatic voting)
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use.
-If you have no idea whats a script, npm, github or dependencies you should look at the end of the page.
+If you have no idea whats a script, npm, github or dependencies you really should look at this page end of the page.
 
 ## Features
 - Automatically vote multiple times;
@@ -26,8 +26,12 @@ If you have no idea whats a script, npm, github or dependencies you should look 
 
 ![Options](https://github.com/HRPsomenumbers/images/blob/master/options.PNG)
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
 ![Proof that it works](https://github.com/HRPsomenumbers/images/blob/master/proof.PNG)
 
 
@@ -42,7 +46,7 @@ For dummies:
 3. Download the script https://github.com/HRPsomenumbers/strawpoll-bot/archive/master.zip
 4. Place the files (which you have downloaded in the step 3) in a folder.
 5. Open the folder; right click on it; click on "Git Bash here"
-![Right click; Git Bash here](https://raw.githubusercontent.com/HRPsomenumbers/images/master/Sem%20t%C3%ADtulo.png?token=AKD35OLRIYISRHWMPRRJWRS6W22NC)
+![Right click; Git Bash here](https://github.com/HRPsomenumbers/images/blob/master/Sem%20t%C3%ADtulo.png)
 6. Write node index in the terminal
 7. Profit !
 
