@@ -14,6 +14,7 @@ If you have no idea whats a script, npm, github or dependencies you really shoul
 - Voting in multiple options poll;
 - Voting in strawpoll.com (only works for strawpoll.me for now);
 - If you wan't anything you can request it :)
+- Fix to ECONNRESET. Im aware of this bug. I'll try changing from request to another library.
 
 
 ## How to use it:
