@@ -26,6 +26,7 @@ If you have no idea whats a script, npm, github or dependencies you really shoul
                                                                                                                                                                                                                                                                                                                                                                                                             
 
 ![Options](https://github.com/HRPsomenumbers/images/blob/master/options.PNG)
+* some vots may fail but after all you're get about 1000 votes if you run the script 3 times.
 
                                                                                                                                 
                                                                                                                                 
