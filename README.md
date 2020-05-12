@@ -23,10 +23,10 @@ If you have no idea whats a script, npm, github or dependencies you really shoul
 - Write node index in your terminal/git
 - It will ask you some options;
 - Profit !
-                                                                                                                                                                                                                                                                                                                                                                                                            
+- Some votes may fail: thats because of the proxy. But overall you'll get about 1000~ votes if you run the script 3 times.
+                                                                                                                                                                                                                                                                                                                                                                                                           
 
 ![Options](https://github.com/HRPsomenumbers/images/blob/master/options.PNG)
-_some votes may fail but after all you're get about 1000 votes if you run the script 3 times.
 
                                                                                                                                 
                                                                                                                                 
