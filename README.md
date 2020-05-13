@@ -8,7 +8,7 @@ If you have no idea whats a script, npm, github or dependencies you really shoul
 - Friendly interface;
 - Works with IP check;
 - It's fast;
-- Do *NOT* work with _CAPTCHA_;
+- Does *NOT* work with _CAPTCHA_;
 
 ### I plan to add:
 - Voting in multiple options poll;
