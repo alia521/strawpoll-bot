@@ -1,6 +1,6 @@
 # Strawpoll.me bypass (automatic voting)
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use.
-If you have no idea whats a script, npm, github or dependencies you really should look at this page end of the page.
+If you have no idea whats a script, npm, github or dependencies you really should look at the end of the page.
 
 ## Features
 - Automatically vote multiple times;
