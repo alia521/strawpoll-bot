@@ -32,7 +32,7 @@ Fixed ECONNRESET :)
 
 
 
-
+## Q & A:
 
 
 
@@ -54,4 +54,7 @@ Just check this out: https://www.strawpoll.me/20073567/r
 
 #### Your script doesn't end itself. Is it in an infinite loop ?
 No, it isn't. When it run out of proxies, it'll close the loop but keep the process open to get all the responses :)
+
+#### How does it work ?
+It send votes from multiple proxies. Check details here: https://github.com/666hrp/strawpoll-bot/blob/master/index.js
 
