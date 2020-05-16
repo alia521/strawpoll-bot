@@ -2,9 +2,10 @@
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use.
 
 Fixed ECONNRESET :)
+**PS: Some votes may fail but overral you can get about 1500 votes for each poll**
 
 ## Features
-- Automatically vote multiple times (about 1000 times);
+- Automatically vote multiple times (about 1500 times);
 - Auto proxy scrapper;
 - Friendly interface;
 - Works with IP check;
