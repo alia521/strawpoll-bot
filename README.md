@@ -50,7 +50,7 @@ Okay, i'll explain it better:
 6. Write node index in the terminal
 7. Profit !
 
-#### I do-don't know anything about coding. How I can be sure you it works ?!
+#### I d-don't know anything about coding. How I can be sure you it works ?!
 Just check this out: https://www.strawpoll.me/20073567/r
 
 #### Your script doesn't end itself. Is it in an infinite loop ?
