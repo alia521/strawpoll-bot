@@ -60,3 +60,7 @@ It send votes from multiple proxies. Check details here: https://github.com/666h
 
 #### Is it still working ?
 Last time I tested it: 16/05/2020. Not sure when you're reading this, but if it stops working, you can contact me.
+
+#### Does it have any dependencies ? Do I need to install them ?
+Yes, it does. It is dependent of request, cheerio and readline-sync. 
+No, you don't have to install any dependencies since its already installed with the code (you can find them at node_modules)
