@@ -58,3 +58,5 @@ No, it isn't. When it run out of proxies, it'll close the loop but keep the proc
 #### How does it work ?
 It send votes from multiple proxies. Check details here: https://github.com/666hrp/strawpoll-bot/blob/master/index.js
 
+#### Is it still working ?
+Last time I tested it: 16/05/2020. Not sure when you're reading this, but if it stops working, you can contact me.
