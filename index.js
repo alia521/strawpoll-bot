@@ -1,55 +1,74 @@
-var request     = require('request'); // 
-var cheerio     = require('cheerio'); //
-var interface   = require('readline-sync');
-var fuck_errors = require('longjohn'); // supposed to handle error ECONNRESET
-var plist       = [] // HTTP proxies LIST
-
-var r = request.defaults()
-var x = 0; // number of proxies that didn't work for some reason;
-var y = 0; // number of proxies that have worked;
-
-var vote_url = interface.question("What strawpoll.me poll you want to bot (url) ? ");
-var op       = interface.question("What option you wan't to bot ? ");
-var ratio    = 10; // ratio of votes; 200 = 5 per second; 1000/ratio = y per second;
+const request     = require('request'); 
+const cheerio     = require('cheerio');
+const interface   = require('readline-sync');
 
 
+var proxies     = []; var n, n_ = 0;
+var data        = [0, 0, 0]
 
-function vote(url, value, n) { // function for vote
-request(url, function (error, response, body) {
+var url_ = interface.question("What strawpoll.me poll you want to bot (url) ? ");
+var op   = interface.question("What option you wan't to bot ? ");
 
-  $ = cheerio.load(body); var data = $('form[data-form-type="poll-vote"]').html();
-  $ = cheerio.load(data); var a = $('input[id="field-security-token"]').val();
-  var b = $('input[id="field-authenticity-token"]').attr("name");
+var sec;
+var opp;
 
-  var options = $('input[name="options"]');
-  data = {"s":a+b, "opval":options}
+function setup() {
+  
+  request(url_, function (error, response, body) {
+      $ = cheerio.load(body); 
 
-  var i = 0; var x = plist.length;
+      if(response.statusCode == '200') {
+        var security_token = $('input[id="field-security-token"]').val();
+        var authenticity_token = $('input[id="field-authenticity-token"]').attr("name");
+        var options = $('input[name="options"]');
+        opp = options.eq(op).val();
+        sec = security_token + authenticity_token;
+      getProxies();
 
-  function fx() { setP(i); sendVote(url, data.s, options.eq(value).val()); i++; if(i < x ) { setTimeout(fx, ratio); }} 
-           fx();
 
- })}
-
-function setP(i) {  r = request.defaults({'proxy':'http://' + plist[i]}) }
-
-function sendVote(url, security_token, option_, a) {
-  r.post(url, {form:{"security-token":security_token, 'options':option_}}).on('error', function (exc) {
-   x++
-}).on('response', function(response) { if(response.statusCode == 200) { y++ } else { x++}
-                                       console.log(y, "succesfuly votes made.", x, 'failed.');
-})}
+      }
+ })
 
 
 
+}
 
-request('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all', 
-function (error, response, body) {
-  if (error) {
-     console.log('Failed to get the proxies. Try again later.')}
-     plist = body.toString().split('\n');
+function getProxies(a) {
+  request('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all', 
+  function (error, response, body) {
+  if (error) { console.log('Failed to get the proxies. Try again later.')}
+     proxies = body.toString().split('\n');
 
     if(response.statusCode == 200) {
-      vote(vote_url, op, plist.length)
+     aaa_ = setInterval(fuckyou, 5);
     }
 });
+}
+
+function fuckyou() {
+    n  = proxies.length;
+    r = request.defaults({'proxy':'http://' + proxies[n_]}); 
+    n_++;
+
+    r.post(url_, {form:{"security-token":sec, 'options':opp}},
+    (err, response, body) => {
+      if (err) {
+        data[0]++;
+        data[2]++;
+            } else {
+              if(response.statusCode == '200') { data[1]++ }
+              console.log('Successfuly made', data[1], 'votes.', data[0], 'failed.')
+              data[2]++;
+            }
+  })
+    process.on('uncaughtException', function(error) {})  
+
+    if(n_ >= n) { clearInterval(aaa_);} 
+    if(data[2] >= n) { console.log(n, data[2],'Done :). Get new/more proxies if you want to bot more.')}
+}
+
+
+
+
+
+setup();
