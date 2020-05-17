@@ -6,6 +6,7 @@ Script for automatically vote multiple times in the website "strawpoll.me". Easy
 - Auto proxy scrapper;
 - Friendly interface;
 - Works with IP check;
+- You can use your own proxies if you wan't to.
 - Does *NOT* work with _CAPTCHA_;
 
 ### I plan to add:
