@@ -62,4 +62,4 @@ It send votes from multiple proxies. Check details here: https://github.com/666h
 Last time I tested it: 17/05/2020. Not sure when you're reading this, but if it stops working, you can contact me.
 
 #### Does it have any dependencies ? Do I need to install them ?
-Yes, it does. You must install it as asked
+Yes, it does. You must install it as asked here https://github.com/666hrp/strawpoll-bot/blob/master/README.md#how-to-use-it
