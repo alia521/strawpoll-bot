@@ -24,7 +24,7 @@ Run node index.js
 
 ## How to use it:
 - Download or clone this repository;
-- Open a terminal/command prompt *inside* the folder;
+- Open a terminal/command prompt *inside* its the folder;
 - Run ```npm install```;
 - Run ```node index.js```;
 - Enter poll url/option when asked.
