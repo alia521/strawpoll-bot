@@ -1,9 +1,6 @@
 # Strawpoll.me bypass (automatic voting)
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use.
 
-Fixed ECONNRESET :)
-**PS: Some votes may fail but overrall you can get about 1500 votes for each poll**
-
 ## Features
 - Automatically vote multiple times (about 1500 times);
 - Auto proxy scrapper;
@@ -16,22 +13,20 @@ Fixed ECONNRESET :)
 - Voting in strawpoll.com (only works for strawpoll.me for now);
 - If you wan't anything you can request it :)
 
+Download this repository
+Open a command prompt inside the folder
+Enter npm install
+Rename config.json.example to config.json and adjust it (See below)
+Add accounts using the Database Manager
+Run node index.js
+
 
 ## How to use it:
 - Download or clone this repository;
-- Open it's folder;
-- Write node index in your terminal/git
-- It will ask you some options;
-- Profit !
-
-
-![Options](https://github.com/HRPsomenumbers/images/blob/master/options.PNG)
-
-
-
-
-
-
+- Open a terminal/command prompt *inside* the folder;
+- Run ```npm install```;
+- Run ```node index.js```;
+- Enter poll url/option when asked.
 
 ## Q & A:
 
@@ -46,12 +41,15 @@ Okay, i'll explain it better:
 2. Download node.js if you don't have it. (https://en.wikipedia.org/wiki/Node.js, https://nodejs.org/en/)
 3. Download the script https://github.com/666hrp/strawpoll-bot/archive/master.zip
 4. Place the files (which you have downloaded in the step 3) in a folder.
-5. Open the folder; right click on it; click on "Git Bash here"
-6. Write node index in the terminal
-7. Profit !
+5. Open the folder; right click _INSIDE_ it. Click on "Git Bash Here"
+6. Write ```npm install``` and press enter
+7. Write ```node index.js``` and press enter
+8. Do as asked.
+9. Done.
+
 
 #### I d-don't know anything about coding. How I can be sure you it works ?!
-Just check this out: https://www.strawpoll.me/20073567/r
+Just check this out: https://www.strawpoll.me/20073567/r https://www.strawpoll.me/20081004/r
 
 #### Your script doesn't end itself. Is it in an infinite loop ?
 No, it isn't. When it run out of proxies, it'll close the loop but keep the process open to get all the responses :)
@@ -61,8 +59,7 @@ Although it will eventually end itself.
 It send votes from multiple proxies. Check details here: https://github.com/666hrp/strawpoll-bot/blob/master/index.js
 
 #### Is it still working ?
-Last time I tested it: 16/05/2020. Not sure when you're reading this, but if it stops working, you can contact me.
+Last time I tested it: 17/05/2020. Not sure when you're reading this, but if it stops working, you can contact me.
 
 #### Does it have any dependencies ? Do I need to install them ?
-Yes, it does. It is dependent of request, cheerio and readline-sync. 
-No, you don't have to install any dependencies since its already installed with the code (you can find them at node_modules)
+Yes, it does. You must install it as asked
