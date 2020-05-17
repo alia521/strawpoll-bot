@@ -1,5 +1,8 @@
 # Strawpoll.me bypass (automatic voting)
-Script for automatically vote multiple times in the website "strawpoll.me". Easy to use.
+Script for automatically vote multiple times in the website "strawpoll.me". Easy to use. 
+I think I have spent more sundays than I should working on this. I feel like the most recent version of this code has more ifs than it should (don't worry, its not here) so before I upload it I find a way to compact it :(
+
+https://www.strawpoll.me/20083588/r                https://www.strawpoll.me/20083356/r
 
 ## Features
 - Automatically vote multiple times (about 1500 times);
@@ -10,7 +13,8 @@ Script for automatically vote multiple times in the website "strawpoll.me". Easy
 - Does *NOT* work with _CAPTCHA_;
 
 ### I plan to add:
-- Voting in multiple options poll;
+- Voting in multiple options polls;
+- Voting in non-protected by ip check polls
 - Voting in strawpoll.com (only works for strawpoll.me for now);
 - If you wan't anything you can request it :)
 
