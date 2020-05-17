@@ -14,12 +14,6 @@ Script for automatically vote multiple times in the website "strawpoll.me". Easy
 - Voting in strawpoll.com (only works for strawpoll.me for now);
 - If you wan't anything you can request it :)
 
-Download this repository
-Open a command prompt inside the folder
-Enter npm install
-Rename config.json.example to config.json and adjust it (See below)
-Add accounts using the Database Manager
-Run node index.js
 
 
 ## How to use it:
