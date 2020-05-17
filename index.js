@@ -1,74 +1,59 @@
-const request     = require('request'); 
-const cheerio     = require('cheerio');
-const interface   = require('readline-sync');
+const inquirer = require('inquirer');
+const cp       = require('child_process'); /* To call the second script */
+const fs       = require('fs');
+
+var config   = require('./config.json');
 
 
-var proxies     = []; var n, n_ = 0;
-var data        = [0, 0, 0]
 
-var url_ = interface.question("What strawpoll.me poll you want to bot (url) ? ");
-var op   = interface.question("What option you wan't to bot ? ");
+inquirer.prompt([{
+          type: 'list',
+          name: 'command',
+          message: 'What would you like to do ?',
+          choices: ['Bot a poll', 'Configurate'],
+        },
+      ]).then(answers => { if(answers.command == 'Bot a poll') {inquirer.prompt([{
+                           type: 'input',
+                           name: 'url',
+                           message: 'What is the poll URL (link) ?'},])
+        .then(answers => {
+          if(answers.url.includes('strawpoll.com') || answers.url.includes('strawpoll.de')) { 
+            console.log('I can only bot strawpoll.me polls for now :('); return
+          }
+          if(!answers.url.includes('strawpoll.me')) { 
+            console.log('You must use the following format: https://www.strawpoll.me/XXXXXXXXX'); return
+          }
+          config.current_section.url = answers.url;
 
-var sec;
-var opp;
+          fs.writeFile('./config.json', JSON.stringify(config), function writeJSON(err) { if (err) return console.log(err); });
 
-function setup() {
-  
-  request(url_, function (error, response, body) {
-      $ = cheerio.load(body); 
-
-      if(response.statusCode == '200') {
-        var security_token = $('input[id="field-security-token"]').val();
-        var authenticity_token = $('input[id="field-authenticity-token"]').attr("name");
-        var options = $('input[name="options"]');
-        opp = options.eq(op).val();
-        sec = security_token + authenticity_token;
-      getProxies();
-
-
+inquirer.prompt([{ type: 'input',
+                   name: 'option_AAAA',
+                   message: 'Which option you want to bot for (0 is the first one, 1 the second etc) ?'},
+      ]).then(answers => {
+          console.log("\x1b[32m" + 'Checking proxies, breaking the security system and sending votes..');
+          config.current_section.option = answers.option_AAAA;
+          
+          fs.writeFile('./config.json', JSON.stringify(config), function writeJSON(err) { if (err) return console.log(err); });
+          cp.fork('./main.js');
+            })
+        })
       }
- })
-
-
-
-}
-
-function getProxies(a) {
-  request('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all', 
-  function (error, response, body) {
-  if (error) { console.log('Failed to get the proxies. Try again later.')}
-     proxies = body.toString().split('\n');
-
-    if(response.statusCode == 200) {
-     aaa_ = setInterval(fuckyou, 5);
-    }
-});
-}
-
-function fuckyou() {
-    n  = proxies.length;
-    r = request.defaults({'proxy':'http://' + proxies[n_]}); 
-    n_++;
-
-    r.post(url_, {form:{"security-token":sec, 'options':opp}},
-    (err, response, body) => {
-      if (err) {
-        data[0]++;
-        data[2]++;
-            } else {
-              if(response.statusCode == '200') { data[1]++ }
-              console.log('Successfuly made', data[1], 'votes.', data[0], 'failed.')
-              data[2]++;
-            }
-  })
-    process.on('uncaughtException', function(error) {})  
-
-    if(n_ >= n) { clearInterval(aaa_);} 
-    if(data[2] >= n) { console.log(n, data[2],'Done :). Get new/more proxies if you want to bot more.')}
-}
-
-
-
-
-
-setup();
+      if(answers.command == 'Configurate') {
+inquirer.prompt([{
+          type: 'list',
+          name: 'prox',
+          message: 'Automatically get proxies ?',
+          choices: ['true', 'false'],
+        },
+      ]).then(answers => { 
+        switch(answers.prox) {
+          case 'true':
+          config.options.get_proxies = true;  fs.writeFile('./config.json', JSON.stringify(config), function writeJSON(err) { if (err) return console.log(err); });
+          console.log('Done. Execute the script again to apply the changes.')
+          break
+          case 'false': 
+          config.options.get_proxies = false; fs.writeFile('./config.json', JSON.stringify(config), function writeJSON(err) { if (err) return console.log(err); });
+          console.log('Done. Note that you must add proxies in the proxy_list.json file now (unless you activate this option again)')
+          break
+      }})}})
