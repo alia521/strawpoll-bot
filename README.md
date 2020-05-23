@@ -1,6 +1,6 @@
 # Strawpoll.me bypass (automatic voting)
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use. 
-I think I have spent more sundays than I should working on this. I feel like the most recent version of this code has more ifs than it should (don't worry, its not this one) so before I upload it I find a way to compact it :(
+I think I have spent more sundays than I should working on this. I feel like the most recent version of this code has more ifs than it should (don't worry, its not this one) so before I upload it I need to find a way to compact it :(
 
 https://www.strawpoll.me/20083588/r                https://www.strawpoll.me/20083356/r
 
