@@ -1,4 +1,4 @@
-# Strawpoll.me bypass (automatic voting)
+# Strawpoll.me voting bot
 Script for automatically vote multiple times in the website "strawpoll.me". Easy to use. 
 Test poll: https://www.strawpoll.me/42715948/r
 
