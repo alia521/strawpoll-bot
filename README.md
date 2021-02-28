@@ -19,12 +19,6 @@ Test poll: https://www.strawpoll.me/42715948/r
 - Run ```node index.js```;
 - Enter poll url/option when asked.
 
-## Q & A:
-
-
-
-
-
 #### Sorry, I don't understand. How can I use this ? (on windows)
 
 1. Download the program GIT  (https://en.wikipedia.org/wiki/Git, https://git-scm.com/downloads)
@@ -35,9 +29,6 @@ Test poll: https://www.strawpoll.me/42715948/r
 6. Write ```npm install``` and press enter
 7. Write ```node index.js``` and press enter
 8. Done.
-
-#### How does it work ?
-It send votes from multiple proxies. Check details here: https://github.com/666hrp/strawpoll-bot/blob/master/index.js
 
 #### Is it still working ?
 Last time I tested it: 28/02/2021.
