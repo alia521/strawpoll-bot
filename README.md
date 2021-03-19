@@ -23,7 +23,7 @@ Test poll: https://www.strawpoll.me/42715948/r
 
 1. Download the program GIT  (https://en.wikipedia.org/wiki/Git, https://git-scm.com/downloads)
 2. Download node.js  (https://en.wikipedia.org/wiki/Node.js, https://nodejs.org/en/)
-3. Download the script https://github.com/666hrp/strawpoll-bot/archive/master.zip
+3. Download the script https://github.com/aaaaa289/strawpoll-bot/archive/refs/heads/master.zip
 4. Place the files (which you have downloaded in the step 3) in a folder.
 5. Open the folder; right click _INSIDE_ it. Click on "Git Bash Here"
 6. Write ```npm install``` and press enter
