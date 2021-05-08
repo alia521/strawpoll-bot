@@ -21,7 +21,7 @@ inquirer.prompt([{
             console.log('I can only bot strawpoll.me polls for now :('); return
           }
           if(!answers.url.includes('strawpoll.me')) { 
-            console.log('You must use the following format: https://www.strawpoll.me/XXXXXXXXX'); return
+            console.log('You must use the following format: https://www.strawpoll.me/qqvrf35xx'); return
           }
           config.current_section.url = answers.url;
 
